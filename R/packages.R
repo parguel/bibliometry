@@ -1,0 +1,2 @@
+library(bibliometrix)
+library(tidyverse)
