@@ -9,3 +9,5 @@ corpus <- load_corpus()
 # this stage is better avoided because it is very, very slow...!
 corpus_df <- corpus_dbf(corpus)
 
+# 
+search_taxa()
