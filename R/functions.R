@@ -13,11 +13,14 @@ load_corpus <- function() {
 corpus_dbf <- function(corpus){
   corpus_df <- convert2df(corpus, dbsource = "isi", format = "bibtex") # very slow!!
   corpus_df <- cbind(corpus_df, taxa = c(rep(NA, length(corpus_df$AU))))
+  
+  save(corpus_df, file = "output/convertedcorpus")
 }
 
 # function to identify the taxa (animal / plant)
 search_taxa <- function() {
   
+  load(file = "output/convertedcorpus")
   # creating the sub-dataframe to search in
   search_df <- corpus_df %>% 
     select(UT, TI, AB, DE) %>% 
