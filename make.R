@@ -19,3 +19,4 @@ corpus_df <- left_join(corpus_df, search_df)
 
 animal_corpus <- subset(corpus_df, corpus_df$animal == "yes")
 plant_corpus <- subset(corpus_df, corpus_df$plant == "yes")
+

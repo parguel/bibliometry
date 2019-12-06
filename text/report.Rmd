@@ -4,3 +4,17 @@ author: Roger Pradel & Jan Perret
 date: 06/12/2019
 output: pdf_document
 ---
+
+# animal monitoring
+
+```{r animal, echo=T}
+getwd()
+source(../make.R)
+results_animal <- biblioAnalysis(animal_corpus, sep = ";")
+```
+
+```{r animalfigure}
+
+plot(x = results_animal, k=10, pause=FALSE)
+```
+
