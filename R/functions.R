@@ -9,6 +9,12 @@ load_corpus <- function() {
   # return(corpus)
 }
 
+# convert corpus to dataframe (this is slow!) 
+corpus_dbf <- function(corpus){
+  corpus_df <- convert2df(corpus, dbsource = "isi", format = "bibtex") # very slow!!
+  corpus_df <- cbind(corpus_df, taxa = c(rep(NA, length(corpus_df$AU))))
+}
+
 # function to identify the taxa (animal / plant)
 search_taxa <- function() {
   
