@@ -1,0 +1,32 @@
+---
+title: "Plant vs Animal Monitoring Bibliometry"
+author: "Roger Pradel & Jan Perret"
+date: "06/12/2019"
+output:
+  html_document:
+    df_print: paged
+---
+
+# animal monitoring
+
+```{r animal, echo=FALSE}
+source("make.R")
+results_animal <- biblioAnalysis(animal_corpus, sep = ";")
+results_plant <- biblioAnalysis(plant_corpus, sep = ";")
+
+```
+
+```{r animalfigure}
+
+plot(x = results_animal, k=10, pause=FALSE)
+
+```
+
+
+# plant monitoring
+
+```{r plantfigure}
+
+plot(x = results_plant, k=10, pause=FALSE)
+
+```

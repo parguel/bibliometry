@@ -1,5 +1,5 @@
 # sources
-source("R/packages.r")
+source("R/packages.R")
 source("R/functions.R")
 
 # data input
@@ -10,6 +10,7 @@ source("R/functions.R")
 # corpus_df <- corpus_dbf(corpus)
 
 # running the search_taxa function
+load(file = "output/convertedcorpus")
 search_df <- search_taxa()
 
 # joinning the "animal" and "plant" columns to the original dataframe
