@@ -4,7 +4,7 @@
 corpus <- load_corpus()
 
 corpus_df <- convert2df(corpus, dbsource = "isi", format = "bibtex")
-corpus_df <- cbind(corpus_df, taxa = c(rep(NA, length(corpus_df$AU))))
+corpus_df <- cbind(corpus_df, animal = c(rep(NA, length(corpus_df$AU))), plant = c(rep(NA, length(corpus_df$AU))))
 
 results <- biblioAnalysis(corpus_df, sep = ";")
 
