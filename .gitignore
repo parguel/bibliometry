@@ -6,7 +6,6 @@
 .RData
 
 # Example code in package build process
-*-Ex.R
 R/exploration_script.R
 
 # Output files from R CMD build
