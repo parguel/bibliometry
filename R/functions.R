@@ -12,8 +12,7 @@ load_corpus <- function() {
 # convert corpus to dataframe (this is slow!) 
 corpus_dbf <- function(corpus){
   corpus_df <- convert2df(corpus, dbsource = "isi", format = "bibtex") # very slow!!
-  corpus_df <- cbind(corpus_df, taxa = c(rep(NA, length(corpus_df$AU))))
-  
+
   save(corpus_df, file = "output/convertedcorpus")
 }
 
@@ -54,5 +53,6 @@ search_taxa <- function() {
     }
   }
   
+  return(search_df)
   
 }
